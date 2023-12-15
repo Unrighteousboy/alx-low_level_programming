@@ -10,23 +10,23 @@
 int main(void)
 {
 	int n;
+
 	srand(time(0));
 
 	n = rand() - RAND_MAX / 2;
+
 	if (n > 0)
 	{
-		printf("%d\n", n);
-		printf(" Is positive\n");
+		printf("%dIs positive", n);
 	}
 	else if (n < 0)
 	{
-		printf("%d\n", n);
-		printf(" Is negative\n");
+		printf("%dIs negative", n);
 	}
 	else
 	{
-		printf("%d\n", n);
-		printf(" Is zero\n");
+		printf("%dIs zero", n);
 	}
+	printf("\n");
 	return (0);
 }
