@@ -11,8 +11,8 @@ int main(void)
 	
 	for (a = 0; a < 0; a++)
 	{
-		printf(a);
+		putchar(a);
 	}
-	printf('\n');
+	putchar('\n');
 	return (0);
 }
