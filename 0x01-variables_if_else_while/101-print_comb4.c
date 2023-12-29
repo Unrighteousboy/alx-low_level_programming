@@ -7,22 +7,22 @@
  */
 int main(void)
 {
-	int hundred;
+	int huns;
 	int tens;
 	int ones;
 
-	for (hundred = '0'; hundred <= '9'; hundred++)
+	for (huns = '0'; huns <= '9'; huns++)
 	{
 		for (tens = '0'; tens <= '9'; tens++)
 		{
 			for (ones = '0'; ones <= '9'; ones++)
 			{
-				if (!((tens > ones) || (tens == ones) || (hundred > tens) || (hundred == tens)))
+				if (!((tens > ones) || (tens == ones) || (huns > tens) || (huns == tens)))
 				{
-					putchar(hundred);
+					putchar(huns);
 					putchar(tens);
 					putchar(ones);
-					if (!(hundred == '7' && tens == '8' && ones == '9'))
+					if (!(huns == '7' && tens == '8' && ones == '9'))
 					{
 						putchar(',');
 						putchar(' ');
