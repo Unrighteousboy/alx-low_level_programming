@@ -10,11 +10,11 @@ int main(void)
 	int tens;
 	int ones;
 
-	for (tens = 0; tens < 10; tens++)
+	for (tens = 0; tens <= '9'; tens++)
 	{
-		for (ones = 0; ones < 10; ones++)
+		for (ones = 0; ones <= '9'; ones++)
 		{
-			if (!((ones == tens || tens > ones)))
+			if (!((ones == tens) || (tens > ones)))
 			{
 				putchar(tens);
 				putchar(ones);
