@@ -14,19 +14,18 @@ int main(void)
 	{
 		for (ones = '0'; ones <= '9'; ones++)
 		{
-			if (!((ones == tens) || (tens > ones)))
+			if (!((tens > ones) || (tens == ones)))
 			{
 				putchar(tens);
 				putchar(ones);
-			
-			if (!(ones == '9' && tens == '8'))
-			{
-				putchar(',');
-				putchar(' ');
+				if (!(tens == '8' && ones == '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
-	
-putchar('\n');
-return (0);
+	putchar('\n');
+	return(0);
 }
