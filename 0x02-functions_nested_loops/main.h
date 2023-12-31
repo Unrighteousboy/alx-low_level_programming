@@ -1,5 +1,3 @@
-#include <stdii.h>
-
 void print_alphabet(void)
 {
 	char ch;
