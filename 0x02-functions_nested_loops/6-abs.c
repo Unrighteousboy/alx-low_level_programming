@@ -4,12 +4,12 @@
  * _abs - computes absolute value of a numver
  * Return: the absolute value
  */
-int _abs(int)
+int _abs(int c)
 {
-	if (int < 0)
+	if (c < 0)
 	{
-		int abs = int * -1;
+		int abs = c * -1;
 		return (abs);
 	}
-	return (int);
+	return (c);
 }
