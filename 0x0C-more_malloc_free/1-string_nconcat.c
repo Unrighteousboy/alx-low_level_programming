@@ -40,6 +40,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = count2;
 	}
+	else
+	{
+		count = count1 + n;
+	}
 
 	ptrStr = malloc(sizeof(char) * count + 1);
 
@@ -56,5 +60,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ptrStr[i] = s2[i - count1];
 	}
+	ptrStr[count] = '\0';
 	return (ptrStr);
 }
