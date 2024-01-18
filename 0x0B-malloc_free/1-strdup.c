@@ -18,10 +18,10 @@ char *_strdup(char *str)
     
     if (count == 0)
     {
-        return ('NULL');
+        return (NULL);
     }
     
-    ptrStr = malloc(i * sizeof(char) + 1);
+    ptrStr = malloc(i * sizeof(char));
     
     for (i = 0; i < count; i++)
     {
