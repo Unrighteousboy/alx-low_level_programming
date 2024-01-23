@@ -5,8 +5,12 @@
  * @age: dog age
  * @name: dog name
  * @owner: dog owner
+ * @dest: destination
+ * @src: source
  * Return: A new dog
  */
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newDog;
@@ -51,7 +55,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 /**
  * _strcpy - copy a string into another string
- * @desc: string destination
+ * @dest: string destination
  * @src: string source
  * Return: dest
  */
