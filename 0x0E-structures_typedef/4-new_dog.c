@@ -29,14 +29,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	(*newDog).owner = malloc(sizeof(char) * ownerLen + 1);
+	newDog->owner = malloc(sizeof(char) * ownerLen + 1);
 	if (newDog->owner == NULL)
 	{
 		free(newDog);
 		return (NULL);
 	}
 
-	(*newDog).name = malloc(sizeof(char) * nameLen + 1);
+	newDog->name = malloc(sizeof(char) * nameLen + 1);
 	if (newDog->name == NULL)
 	{
 		free(newDog->owner);
@@ -44,12 +44,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	(*newDog).name = _strcpy(newDog->name, name);
-	(*newDog).owner = _strcpy(newDog->owner, owner);
-	(*newDog).age = age;
+	newDog->name = _strcpy(newDog->name, name);
+	newDog->owner = _strcpy(newDog->owner, owner);
+	newDog->age = age;
 
 	return (newDog);
-};
+}
 
 /**
  * _strcpy - copy a string into another string
@@ -61,13 +61,13 @@ char *_strcpy(char *dest, char *src)
 {
 	int i;
 
-	for (i = 0; s[i] = '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		dest[i] = src[i];
 	}
 	dest[i++] = '\0';
 	return (dest);
-};
+}
 
 /**
  * _strlen - length of a string
@@ -78,9 +78,9 @@ int _strlen(char *s)
 {
 	int i;
 
-	for (i = 0; s[i] = '\0';)
+	for (i = 0; s[i] != '\0';)
 	{
 		i++;
 	}
 	return (i);
-};
+}
