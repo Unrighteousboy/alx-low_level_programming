@@ -1,7 +1,5 @@
 #include <stdlib.h>
 #include "lists.h"
-#include <stdio.h>
-#include <string.h>
 /**
  * free_list - free a list
  * @head: paramter
@@ -14,8 +12,8 @@ void free_list(list_t *head)
 	while (head)
 	{
 		temp = head->next;
-		free(temp->str);
-		free(temp);
+		free(head->str);
+		free(head);
 		head = temp;
 	}
 }
